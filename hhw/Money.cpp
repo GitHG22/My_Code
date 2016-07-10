@@ -23,9 +23,5 @@ int rs2 = ((((amt%100)%20)%10)%5)/2;
 cout<<rs2<<'\n';
 cout<<"Total = "<<rs100+rs20+rs10+rs5+rs2<<'\n';
 cout<<"Wew. Boi so rich.";
-
-
-
-
 return 0;
 }

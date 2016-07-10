@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+void main(){
     int n1;
     int n2;
     cout<<"Enter the numbers:";
@@ -22,6 +22,5 @@ int main(){
     default : cout<<"Wat?";
     }
 
-    return 0;
-}
 
+}
