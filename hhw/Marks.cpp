@@ -1,6 +1,5 @@
 #include <iostream> //In Turbo C++, write iostream.h
 
-
 using namespace std; // basically places std in front of stuff like cout actually becomes std::cout
 
 int main() { // use void for Turbo C++
