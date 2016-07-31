@@ -1,11 +1,10 @@
 #include<iostream>
-#include<conio.h>
-#include<stdlib.h>
+
 using namespace std;
-int main()
+void greatest()
 {
     int x,mx,a,mn;
-    cout<<"Enter the numbers| 0to exit\n";
+    cout<<"Enter the numbers. Enter 0 when you are done."<<endl;
     cin>>x;
     if(x!=0){
      mx=x;
