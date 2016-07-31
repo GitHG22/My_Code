@@ -12,7 +12,7 @@
 
 
 
-    Copyright (C) 2016  Harshit Garg
+    Copyright (C) 2016  Harshit Garg //Help by NixonZ
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -77,7 +77,7 @@ int main()  {
     do  {
         cout
         <<endl<<endl
-        <<"1. See which number is greatest (from a max of 4)"<<endl
+        <<"1. See which number is maximum and minimum"<<endl
         <<"2. Enter a character and check if it's a number or alphabet"<<endl
         <<"3. Find the 'raised to power' of a number"<<endl
         <<"4. Generate 'n' natural/even/odd numbers and find the sum and product of them"<<endl //Could have done separate natural/even/odd numbers but no. Why? Because iLazy.
