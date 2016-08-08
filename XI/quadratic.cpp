@@ -2,7 +2,7 @@
 #include<conio.h>
 #include<math.h>
 using namespace std;
-struct complex //data type is created
+struct complex 
 {
  float real;
  float imag;
@@ -24,12 +24,12 @@ int main()
  x=-b/2*a;
  cout<<"\nsince D=0 x="<<x;
  }
- else if(D>0){           //NIG
+ else if(D>0){     
  x1=((-b+sqrt(D))/(2*a)); x2=((-b-sqrt(D))/(2*a));
- cout<<"\nx1="<<x1<<"\nx2="<<x2 ;  //two different roots are defined separately
+ cout<<"\nx1="<<x1<<"\nx2="<<x2 ;  
  }
  else{
- r1.real=((-b)/(2*a)); r1.imag=((sqrt(-D))/(2*a));  /*two different parts of a single variable */
+ r1.real=((-b)/(2*a)); r1.imag=((sqrt(-D))/(2*a));  
  r2.real=((-b)/(2*a)); r2.imag=(-(sqrt(-D))/(2*a));
  cout<<"\nx1="<<r1.real<<'+'<<r1.imag<<'i'; cout<<"\nx2="<<r2.real<<'+'<<r2.imag<<'i';
  }
