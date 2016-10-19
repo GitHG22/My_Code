@@ -1,5 +1,5 @@
 #include<iostream>
-#include<windows.h>
+
 
 using namespace std;
 
@@ -11,7 +11,6 @@ void natnum(){
   sum = 0;
   unsigned long int p;
   p = 1;
-  system("cls");
   cout
   <<"So, you wish to generate and find the sum and the product to n "<<endl
   <<"natural numbers(n)"<<endl
@@ -72,5 +71,4 @@ void natnum(){
     cout<<":/";
     exit(1);
   }
-Sleep(1000);
 }

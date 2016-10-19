@@ -7,8 +7,9 @@ int charalph();
 int power();
 int natnum();
 int table();
-int fib();
-int factorial();
+//int fibonacci();  ----> Find in archive
+int factorial(int n);
 int quadratic();
+int playswithnumbers();
 
 #endif // POINTSTUFF_H_INCLUDED

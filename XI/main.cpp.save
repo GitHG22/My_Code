@@ -76,7 +76,7 @@ int main()  {
         <<"6. Play with numbers"<<endl
         //<<"6. Generate Fibonacci Series and optionally get the sum"<<endl
         //<<"7. Find the factorial of a given number"<<endl
-        <<"7. Find roots of a quadratic equation, because you can't do homework yourself"<<endl
+        <<"8. Find roots of a quadratic equation, because you can't do homework yourself"<<endl
         <<"e. GTFO"<<endl
         <<"So? "
         ;
@@ -96,9 +96,9 @@ int main()  {
                 break;
             case 54: playswithnumbers();//Because the spelling is way too hard//Corrected on 19/10/2016
                 break;
-            //case 55: factorial();
-              //  break;
-            case 55: quadratic();
+            case 55: factorial();
+                break;
+            case 56: quadratic();
                 break;
             case 'e': cout<<"Good Bye, "<<fname<<' '<<lname;break;
             default: break;

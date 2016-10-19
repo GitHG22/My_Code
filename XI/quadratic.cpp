@@ -1,5 +1,4 @@
 #include<iostream>
-#include<windows.h>
 #include<math.h>
 
 using namespace std;
@@ -35,12 +34,12 @@ void quadratic(){
       cout<<"The roots are "<<(-b+sqrt(D))/2*a<<" and "<<(-b-sqrt(D))/2*a;
     }
     else if(D<0){
-      cout<<"LoL, you just entered an equation with unreal roots";
+      cout<<"LoL, you just entered an equation with unreal roots.\nAnyways, you want roots. I get you roots.";
+      cout<<"The roots are "<<(-b+sqrt(-D))/2*a<<"i and "<<(-b-sqrt(-D))/2*a<<'i';
     }
   }
   else {
     cout<<"Why? Just why?";
     exit(1);
   }
-Sleep(1000);
 }

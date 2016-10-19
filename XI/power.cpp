@@ -1,11 +1,10 @@
 #include<iostream>
-#include<windows.h>
+
 
 using namespace std;
 
 void power(){
   //Get x^y
-  system("cls");
   unsigned int i;
   unsigned long int x;
   unsigned long int y;
@@ -20,7 +19,6 @@ void power(){
     p=p*x;
   }
   cout<<x<<'^'<<y<<'='<<p;
-  Sleep(1000);
   }
   else {
     cout<<"RiP. Read Instructions.";

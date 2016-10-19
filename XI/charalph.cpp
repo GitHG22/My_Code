@@ -1,11 +1,11 @@
 #include<iostream>
-#include<windows.h>
+
 
 using namespace std;
 
 void charalph(){
   char i;
-  system("cls");
+
   cout<<"Enter the character : ";
   cin>>i;
   if(i>=48&&i<=57){
@@ -20,5 +20,5 @@ void charalph(){
   else {
     cout <<"DAE"<<endl;
   }
-  Sleep(1000);
+
 }

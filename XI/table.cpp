@@ -1,5 +1,4 @@
 #include<iostream>
-#include<windows.h>
 
 using namespace std;
 
@@ -7,7 +6,6 @@ void table(){
   unsigned int i;
   unsigned long int n;
   unsigned long int t;
-  system("cls");
   cout<<"The number of which you want table : ";
   cin>>n;
   cout<<"Number of terms : ";
@@ -21,5 +19,4 @@ void table(){
     cout<<"Kill you!";
     exit(1);
   }
-  Sleep(1000);
 }
