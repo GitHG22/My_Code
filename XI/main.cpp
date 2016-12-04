@@ -12,7 +12,7 @@
 
 
 
-    Copyright (C) 2016  Harshit Garg //Help by NixonZ
+    Copyright (C) 2016  Harshit Garg aka GitHG22 and Nalin Shani aka NixonZ
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,6 +34,7 @@
 #include<iostream>
 #include<math.h>
 #include<string>
+#include<stdlib.h>
 #include "../headers/pointstuff.h"
 
 using namespace std;
@@ -42,6 +43,25 @@ using namespace std;
 int main()  {
     string fname;
     string lname;
+    cout
+    <<"    |\\      /| \\     /    |------  |-----|  |----\\   |-----\n"
+    <<"    | \\    / |  \\   /     |        |     |  |     \\  |     \n"
+    <<"    |  \\  /  |   \\ /      |        |     |  |      | |---  \n"
+    <<"    |   \\/   |    |       |        |     |  |     /  |     \n"
+    <<"    |        |    |       |------  |-----|  |----/   |-----\n"
+    <<"                                                       v0.1\n\n";
+//Because I always wanted to do this
+
+//| \ \    / / | \
+//| |\ \  / /| |
+//| | \ \/ / | |
+//| |        | |
+//| |        | |
+//And this one too. Will do it later.
+
+
+
+
     cout<<"For best results, be honest.\n"; //Yes, yes its that deep
     cout<<"And there's no way you can loop the code\n";
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
