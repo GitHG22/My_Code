@@ -12,4 +12,4 @@ int factorial(int n);
 int quadratic();
 int playswithnumbers();
 
-#endif // POINTSTUFF_H_INCLUDED
+#endif

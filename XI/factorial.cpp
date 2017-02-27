@@ -10,6 +10,8 @@ for(int i=1; i<=n; i++) {
     }
 return p;
 }
+
+
 /*void factorial(){
   unsigned int i;
   unsigned int n;

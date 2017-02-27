@@ -4,10 +4,10 @@
 using namespace std;
 
 void quadratic(){
-  int a;
-  int b;
-  int c;
-  int D;
+  float a;
+  float b;
+  float c;
+  float D;
   cout<<"Enter the coefficients of the quadratic of the equation as a,b,c respectively so they form a quadratic like ax^2+bx+c \n";
   cout<<"a = ";cin>>a;
   cout<<"b = ";cin>>b;
@@ -35,7 +35,7 @@ void quadratic(){
     }
     else if(D<0){
       cout<<"LoL, you just entered an equation with unreal roots.\nAnyways, you want roots. I get you roots.";
-      cout<<"The roots are "<<(-b+sqrt(-D))/2*a<<"i and "<<(-b-sqrt(-D))/2*a<<'i';
+      cout<<"The roots are "<<-b/(2*a)<<'+'<<sqrt(-D)/2.0*a<<"i and "<<-b/(2.0*a)<<'-'<<sqrt(-D)/2.0*a<<'i';
     }
   }
   else {

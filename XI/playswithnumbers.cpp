@@ -4,7 +4,7 @@
 using namespace std;
 
 int playswithnumbers(){
-    cout<<"\n\n\n-------Play with Numbers-------\nv0.1"
+    cout<<"\n\n\n-------Play with Numbers-------\nv0.1.1"
         <<"\n\nSo, you wanna play with numbers? Here goes\n\n";
     long int num[128];
     int k=0;
@@ -52,21 +52,21 @@ int playswithnumbers(){
                         }
                     }
                     else if(b=='3'){
-                        cout<<"How many Binomial Coefficients do you want? (Enter a number less than 63) ";cin>>n;
-                        n++;
-                        if(n<63){
-                            for(int i=0; i<n; i++){
-                                num[i]=factorial(n-1)/(factorial(i)*factorial(n-i-1));
+                        cout<<"How many Binomial Coefficients do you want?";cin>>n;
+
+                            for(int i=0; i<=n; i++){
+                                num[i]=1;
+                                    for(int j=0; j<i; j++){
+                                        num[i]*=n-j;
+                                        }
+                                    num[i]/=factorial(i);
+
                             }
+                            n++; //Because ahead of this, all functions think the numbers have the range 0 to n but in binomial we get n+1 terms
                         }
-                        else {
-                        cout<<"DAE";
-                        exit(0);
-                        }
-                    }
                     break;
-    case 'e': cout<<"K";
-    exit(0);
+        case 'e': cout<<"K";
+        exit(0); break;
     }
 
     int maxi, mini, flag1=0;
@@ -104,6 +104,7 @@ int playswithnumbers(){
 
     }
 
+    //Check if Arithmetic Progression or not
     int ap=0;
 
     for(int i=2;i<n;i++){
@@ -115,13 +116,17 @@ int playswithnumbers(){
             break;
         }
     }
+
+    //AP check ends here
+
+
     cout<<"\nAnalyzing inputted data..."
         <<"\nDistinctively, the numbers you entered are ";
     for(int i=0;i<k;i++){
         cout<<index[i][0]<<',';
     }
     cout<<"\nTheir sum is  "<<sum<<" and the product is "<<prod;
-    if(ap==0){cout<<"\nThe series of number is an AP.\n";}
+    if(ap==0){cout<<"\nThe series of numbers is an AP.\n";}
     else{cout<<"\nThe series of numbers is not an AP.\n";}
 
 
