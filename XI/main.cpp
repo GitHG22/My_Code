@@ -74,9 +74,20 @@ int main()  {
     else if (fname=="Abhishek"||fname=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh";}
     else if (fname=="varun"||fname=="Varun"){cout<<"Oye! Varun!";lname="Dhawan";}
     else if (fname=="Tarushi"||fname=="tarushi"){cout<<"user6tk spotted";fname="user6tk";}
+
     else if (fname=="Rushil"||fname=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
 //  else if (fname=="Ishaan"||fname=="ishaan"||fname=="ishan"||fname=="Ishaan"||fname=="Tropkillaz"||fname=="tropkillaz"){cout<<"Tropkillaz!";fname="Tropkillaz";lname="Akhand";}
 //  else if (fname=="Nishchay"||fname=="nishchay"){cout<<"ayy Nishanol aka El~Diablo.";fname="Nishchyl";lname="Alcohol";}
+
+    else if (fname=="Ishaan"||fname=="ishaan"||fname=="ishan"||fname=="Ishaan"||fname=="Tropkillaz"||fname=="tropkillaz"){cout<<"Tropkillaz!";fname="Tropkillaz";lname="Akhand";}
+    else if (fname=="Nishchay"||fname=="nishchay"){cout<<"ayy Nishanol aka El~Diablo.";fname="Nishchyl";lname="Alcohol";}
+
+    /********************************************************************************************************************/
+
+    else if (fname=="Hardik"||fname=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
+
+    /********************************************************************************************************************/
+
     else{
     cout<<"Now, for your Last Name : ";
     cin>>lname;
