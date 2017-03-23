@@ -4,12 +4,7 @@
 
 using namespace std;
 
-int main(){
-  char[]
-}
-
-/*char d2h(unsigned long int a){
-  char h[50];
+void d2h(unsigned long int a, char h[]){
   int n=a;
   for(int i=0; n!=0 ;i++){
     switch (n%16){
@@ -29,11 +24,10 @@ int main(){
     h[i]=h[l-i-1];
     h[l-i-1]=temp;
   }
-  return h;
 }
-*/
-/*char d2b(unsigned long int a){
-  char b[50];
+
+
+void d2b(unsigned long int a, char b[]){
   int n=a;
   for(int i=0;n!=0 ;i++){
     b[i]=(char)48+n%2;
@@ -48,10 +42,8 @@ int main(){
     b[i]=b[l-i-1];
     b[l-i-1]=temp;
   }
-
-  return b;
 }
-*/
+
 /*
 One way to do it. Has a lot less range. Doesn't make sense when we can do with char.
 int main(){

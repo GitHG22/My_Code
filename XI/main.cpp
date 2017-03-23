@@ -49,7 +49,7 @@ int main()  {
     <<"    |  \\  /  |   \\ /      |        |     |  |      | |---  \n"
     <<"    |   \\/   |    |       |        |     |  |     /  |     \n"
     <<"    |        |    |       |------  |-----|  |----/   |-----\n"
-    <<"                                                       v0.1\n\n";
+    <<"                                                       v0.1.1\n\n";
 //Because I always wanted to do this
 
 //| \ \    / / | \
@@ -66,7 +66,7 @@ int main()  {
     cout<<"And there's no way you can loop the code\n";
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
     cin>>fname;
-    if (fname=="Harshit"||"harshit"){cout<<"\nAbe kutte apne hi programme mein kya dekhna chah raha hai?\n";}
+    if (fname=="Harshit"||fname=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
     else if (fname=="Yash"||fname=="yash"||fname=="shalya"||fname=="Shalya"){cout<<"ayy motu\n";fname="Motu";lname="Shalya";}
     else if (fname=="Nalin"||fname=="nalin"||fname=="nixonz"||fname=="Nixonz"){cout<<"ayy Nallu";fname="Nallu";lname="Kant";}
     else if (fname=="sarthak"||fname=="Sarthak"){cout<<"Sarthak Bhai! _/\\_";lname="Saharan";}
@@ -74,20 +74,10 @@ int main()  {
     else if (fname=="Abhishek"||fname=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh";}
     else if (fname=="varun"||fname=="Varun"){cout<<"Oye! Varun!";lname="Dhawan";}
     else if (fname=="Tarushi"||fname=="tarushi"){cout<<"user6tk spotted";fname="user6tk";}
-
     else if (fname=="Rushil"||fname=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
 //  else if (fname=="Ishaan"||fname=="ishaan"||fname=="ishan"||fname=="Ishaan"||fname=="Tropkillaz"||fname=="tropkillaz"){cout<<"Tropkillaz!";fname="Tropkillaz";lname="Akhand";}
 //  else if (fname=="Nishchay"||fname=="nishchay"){cout<<"ayy Nishanol aka El~Diablo.";fname="Nishchyl";lname="Alcohol";}
-
-    else if (fname=="Ishaan"||fname=="ishaan"||fname=="ishan"||fname=="Ishaan"||fname=="Tropkillaz"||fname=="tropkillaz"){cout<<"Tropkillaz!";fname="Tropkillaz";lname="Akhand";}
-    else if (fname=="Nishchay"||fname=="nishchay"){cout<<"ayy Nishanol aka El~Diablo.";fname="Nishchyl";lname="Alcohol";}
-
-    /********************************************************************************************************************/
-
     else if (fname=="Hardik"||fname=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
-
-    /********************************************************************************************************************/
-
     else{
     cout<<"Now, for your Last Name : ";
     cin>>lname;
@@ -101,37 +91,50 @@ int main()  {
     do  {
         cout
         <<endl<<endl
-        <<"1. See which number is maximum and minimum"<<endl
-        <<"2. Enter a character and check if it's a number or alphabet"<<endl
-        <<"3. Find the 'raised to power' of a number"<<endl
-        <<"4. Generate 'n' natural/even/odd numbers and find the sum and product of them"<<endl //Could have done separate natural/even/odd numbers but no. Why? Because iLazy.
-        <<"5. Generate the table of a number"<<endl
-        <<"6. Play with numbers"<<endl
+        //<<"1. See which number is maximum and minimum"<<endl Added to playwithnumbers
+
+        <<"1. Play with numbers."<<endl
+        <<"2. Enter a character and check if it's a number or alphabet."<<endl
+
+        //<<"3. Find the 'raised to power' of a number"<<endl //deprecated. Reason: Small program.
+
+        //<<"3. Generate 'n' natural/even/odd numbers and find the sum and product of them"<<endl //Could have done separate natural/even/odd numbers but no. Why? Because iLazy. deprecated. Reason : Mergerd with playwithnumbers
+
+        <<"3. Generate the table of a number."<<endl
+
         //<<"6. Generate Fibonacci Series and optionally get the sum"<<endl
         //<<"7. Find the factorial of a given number"<<endl
-        <<"7. Find roots of a quadratic equation, because you can't do homework yourself"<<endl
+        <<"4. Find roots of a quadratic equation, because you can't do homework yourself."<<endl
+        <<"5. Enter a number in decimal and get the binary and hexadecimal equivalent of it."<<endl
         <<"e. GTFO"<<endl
-        <<"So? "
-        ;
+        <<"So? ";
         cin>>i;
 
         if((i<=56&&i>=48)||i=='e'){
             switch (i){
-            case 49: greatest();
+            //case 49: greatest(); //deprecated. See archive.
+            //    break;
+            case 49: playswithnumbers();//Because the spelling is way too hard//Corrected on 19/10/2016//I changed. It was fibonacci.
                 break;
             case 50: charalph();
                 break;
-            case 51: power();
-                break;
-            case 52: natnum();
-                break;
-            case 53: table();
-                break;
-            case 54: playswithnumbers();//Because the spelling is way too hard//Corrected on 19/10/2016
+            //case 51: power();
+            //    break;
+            //case 51: natnum();
+            //   break;
+            case 51: table();
                 break;
             //case 55: factorial();
               //  break;
-            case 55: quadratic();
+            case 52: quadratic();
+                break;
+            case 53: cout<<"Enter the number : ";
+                     unsigned long int no;
+                     char h[50],b[50];
+                     cin>>no;
+                     d2b(no,b);d2h(no,h);
+                     cout<<"The binary equivalent of the number is "<<b
+                     <<"\nThe hexadecimal equivalent of the number is "<<h<<endl;
                 break;
             case 'e': cout<<"Good Bye, "<<fname<<' '<<lname;break;
             default: break;

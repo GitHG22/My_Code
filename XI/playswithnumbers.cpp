@@ -4,7 +4,7 @@
 using namespace std;
 
 int playswithnumbers(){
-    cout<<"\n\n\n-------Play with Numbers-------\nv0.1.1"
+    cout<<"\n\n\n-------Play with Numbers-------\nv0.1.2"
         <<"\n\nSo, you wanna play with numbers? Here goes\n\n";
     long int num[128];
     int k=0;
@@ -52,7 +52,7 @@ int playswithnumbers(){
                         }
                     }
                     else if(b=='3'){
-                        cout<<"How many Binomial Coefficients do you want?";cin>>n;
+                        cout<<"How many Binomial Coefficients do you want? ";cin>>n;
 
                             for(int i=0; i<=n; i++){
                                 num[i]=1;
@@ -69,7 +69,7 @@ int playswithnumbers(){
         exit(0); break;
     }
 
-    int maxi, mini, flag1=0;
+    int flag1=0;
     long unsigned int prod=1, sum=0;
 
     long int index[128][3];
@@ -100,9 +100,10 @@ int playswithnumbers(){
         }
         flag1=0;
         //index building ends here
-
-
     }
+
+    int mini=index[0][0], maxi=index[0][0];
+
 
     //Check if Arithmetic Progression or not
     int ap=0;
@@ -117,17 +118,44 @@ int playswithnumbers(){
         }
     }
 
-    //AP check ends here
+    //AP check ends here.
+
+
+
+    //GP check. Beacuse why not.
+
+    int gp=0;
+
+    for(int i=2; i<n; i++){
+        if((num[i-1]*num[i-1])==(num[i-2]*num[i])){
+            continue;
+        }
+        else{
+            gp=1;
+            break;
+        }
+    }
+
+    //GP check ends here.
+
 
 
     cout<<"\nAnalyzing inputted data..."
         <<"\nDistinctively, the numbers you entered are ";
     for(int i=0;i<k;i++){
         cout<<index[i][0]<<',';
+        if(index[i][0]>maxi){
+            maxi=index[i][0];
+        }
+        if(index[i][0]<mini){
+            mini=index[i][0];
+        }
     }
-    cout<<"\nTheir sum is  "<<sum<<" and the product is "<<prod;
+    cout<<"\nTheir sum is  "<<sum<<" and the product is "<<prod<<"\nThe largest number is "<<maxi<<" and the smallest one is "<<mini;
     if(ap==0){cout<<"\nThe series of numbers is an AP.\n";}
     else{cout<<"\nThe series of numbers is not an AP.\n";}
+    if(gp==0){cout<<"\nThe series of numbers is an GP.\n";}
+    else{cout<<"\nThe series of numbers is not an GP.\n";}
 
 
     return 0;
