@@ -41,8 +41,6 @@ using namespace std;
 
 
 int main()  {
-    string fname;
-    string lname;
     cout
     <<"    |\\      /| \\     /    |------  |-----|  |----\\   |-----\n"
     <<"    | \\    / |  \\   /     |        |     |  |     \\  |     \n"
@@ -65,27 +63,36 @@ int main()  {
     cout<<"For best results, be honest.\n"; //Yes, yes its that deep
     cout<<"And there's no way you can loop the code\n";
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
-    cin>>fname;
-    if (fname=="Harshit"||fname=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
-    else if (fname=="Yash"||fname=="yash"||fname=="shalya"||fname=="Shalya"){cout<<"ayy motu\n";fname="Motu";lname="Shalya";}
-    else if (fname=="Nalin"||fname=="nalin"||fname=="nixonz"||fname=="Nixonz"){cout<<"ayy Nallu";fname="Nallu";lname="Kant";}
-    else if (fname=="sarthak"||fname=="Sarthak"){cout<<"Sarthak Bhai! _/\\_";lname="Saharan";}
-    else if (fname=="sachin"||fname=="Sachin"){cout<<"Sachin XD";lname="Toy";}
-    else if (fname=="Abhishek"||fname=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh";}
-    else if (fname=="varun"||fname=="Varun"){cout<<"Oye! Varun!";lname="Dhawan";}
-    else if (fname=="Tarushi"||fname=="tarushi"){cout<<"user6tk spotted";fname="user6tk";}
-    else if (fname=="Rushil"||fname=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
-//  else if (fname=="Ishaan"||fname=="ishaan"||fname=="ishan"||fname=="Ishaan"||fname=="Tropkillaz"||fname=="tropkillaz"){cout<<"Tropkillaz!";fname="Tropkillaz";lname="Akhand";}
-//  else if (fname=="Nishchay"||fname=="nishchay"){cout<<"ayy Nishanol aka El~Diablo.";fname="Nishchyl";lname="Alcohol";}
-    else if (fname=="Hardik"||fname=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
+
+
+    class naam {
+        public:
+                string fname;
+                string lname;
+    }user;
+
+
+    cin>>user.fname;
+    if (user.fname=="Harshit"||user.fname=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
+    else if (user.fname=="Yash"||user.fname=="yash"||user.fname=="shalya"||user.fname=="Shalya"){cout<<"ayy motu\n";user.fname="Motu";user.lname="Shalya";}
+    else if (user.fname=="Nalin"||user.fname=="nalin"||user.fname=="nixonz"||user.fname=="Nixonz"){cout<<"ayy Nallu";user.fname="Nallu";user.lname="Kant";}
+    else if (user.fname=="sarthak"||user.fname=="Sarthak"){cout<<"Sarthak Bhai! _/\\_";user.lname="Saharan";}
+    else if (user.fname=="sachin"||user.fname=="Sachin"){cout<<"Sachin XD";user.lname="Toy";}
+    else if (user.fname=="Abhishek"||user.fname=="abhishek"){cout<<"Mango :P";user.fname="Mango";user.lname="Ka Pedh";}
+    else if (user.fname=="varun"||user.fname=="Varun"){cout<<"Oye! Varun!";user.lname="Dhawan";}
+    else if (user.fname=="Tarushi"||user.fname=="tarushi"){cout<<"user6tk spotted";user.fname="user6tk";}
+    else if (user.fname=="Rushil"||user.fname=="rushil"){cout<<"Ae motu ruchill";user.fname="Ru";user.lname="Chill";}
+//  else if (user.fname=="Ishaan"||user.fname=="ishaan"||user.fname=="ishan"||user.fname=="Ishaan"||user.fname=="Tropkillaz"||user.fname=="tropkillaz"){cout<<"Tropkillaz!";user.fname="Tropkillaz";user.lname="Akhand";}
+//  else if (user.fname=="Nishchay"||user.fname=="nishchay"){cout<<"ayy Nishanol aka El~Diablo.";user.fname="Nishchyl";user.lname="Alcohol";}
+    else if (user.fname=="Hardik"||user.fname=="hardik"){cout<<"Lo and behold! Hardik is here!";user.fname="Hardukant";}
     else{
     cout<<"Now, for your Last Name : ";
-    cin>>lname;
+    cin>>user.lname;
   }
 
-    cout<<'\n'<<fname<<' '<<lname<<"? LoL"<<endl;
+    cout<<'\n'<<user.fname<<' '<<user.lname<<"? LoL"<<endl;
 
-    cout<<"Now, Mr."<<lname<<", what did you wish to do?"<<endl;
+    cout<<"Now, Mr."<<user.lname<<", what did you wish to do?"<<endl;
 
     char i;
     do  {
@@ -136,7 +143,7 @@ int main()  {
                      cout<<"The binary equivalent of the number is "<<b
                      <<"\nThe hexadecimal equivalent of the number is "<<h<<endl;
                 break;
-            case 'e': cout<<"Good Bye, "<<fname<<' '<<lname;break;
+            case 'e': cout<<"Good Bye, "<<user.fname<<' '<<user.lname;break;
             default: break;
             }
         }
