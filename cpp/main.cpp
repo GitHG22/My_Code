@@ -65,26 +65,32 @@ int main()  {
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
 
 
-    class naam {
-        public:
-                string fname;
-                string lname;
+    class naam {    // You never know when something's a keyword
+      private:
+        string fname;
+        string lname;
+        int checkname(string fname){
+          string check=fname;
+          strlwr(check);
+          if (user.fname=="Harshit"||user.fname=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
+          else if (user.fname=="Yash"||user.fname=="yash"||user.fname=="shalya"||user.fname=="Shalya"){cout<<"ayy motu\n";user.fname="Motu";user.lname="Shalya";}
+          else if (user.fname=="Nalin"||user.fname=="nalin"||user.fname=="nixonz"||user.fname=="Nixonz"){cout<<"ayy Nallu";user.fname="Nallu";user.lname="Kant";}
+          else if (user.fname=="sarthak"||user.fname=="Sarthak"){cout<<"Sarthak Bhai! _/\\_";user.lname="Saharan";}
+          else if (user.fname=="sachin"||user.fname=="Sachin"){cout<<"Sachin XD";user.lname="Toy";}
+          else if (user.fname=="Abhishek"||user.fname=="abhishek"){cout<<"Mango :P";user.fname="Mango";user.lname="Ka Pedh";}
+          else if (user.fname=="varun"||user.fname=="Varun"){cout<<"Oye! Varun!";user.lname="Dhawan";}
+          else if (user.fname=="Tarushi"||user.fname=="tarushi"){cout<<"user6tk spotted";user.fname="user6tk";}
+          else if (user.fname=="Rushil"||user.fname=="rushil"){cout<<"Ae motu ruchill";user.fname="Ru";user.lname="Chill";}
+          else if (user.fname=="Hardik"||user.fname=="hardik"){cout<<"Lo and behold! Hardik is here!";user.fname="Hardukant";}
+
+        }
+      public:
+        void getname(){
+          cin>>fname;
+        }
     }user;
 
 
-    cin>>user.fname;
-    if (user.fname=="Harshit"||user.fname=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
-    else if (user.fname=="Yash"||user.fname=="yash"||user.fname=="shalya"||user.fname=="Shalya"){cout<<"ayy motu\n";user.fname="Motu";user.lname="Shalya";}
-    else if (user.fname=="Nalin"||user.fname=="nalin"||user.fname=="nixonz"||user.fname=="Nixonz"){cout<<"ayy Nallu";user.fname="Nallu";user.lname="Kant";}
-    else if (user.fname=="sarthak"||user.fname=="Sarthak"){cout<<"Sarthak Bhai! _/\\_";user.lname="Saharan";}
-    else if (user.fname=="sachin"||user.fname=="Sachin"){cout<<"Sachin XD";user.lname="Toy";}
-    else if (user.fname=="Abhishek"||user.fname=="abhishek"){cout<<"Mango :P";user.fname="Mango";user.lname="Ka Pedh";}
-    else if (user.fname=="varun"||user.fname=="Varun"){cout<<"Oye! Varun!";user.lname="Dhawan";}
-    else if (user.fname=="Tarushi"||user.fname=="tarushi"){cout<<"user6tk spotted";user.fname="user6tk";}
-    else if (user.fname=="Rushil"||user.fname=="rushil"){cout<<"Ae motu ruchill";user.fname="Ru";user.lname="Chill";}
-//  else if (user.fname=="Ishaan"||user.fname=="ishaan"||user.fname=="ishan"||user.fname=="Ishaan"||user.fname=="Tropkillaz"||user.fname=="tropkillaz"){cout<<"Tropkillaz!";user.fname="Tropkillaz";user.lname="Akhand";}
-//  else if (user.fname=="Nishchay"||user.fname=="nishchay"){cout<<"ayy Nishanol aka El~Diablo.";user.fname="Nishchyl";user.lname="Alcohol";}
-    else if (user.fname=="Hardik"||user.fname=="hardik"){cout<<"Lo and behold! Hardik is here!";user.fname="Hardukant";}
     else{
     cout<<"Now, for your Last Name : ";
     cin>>user.lname;
