@@ -37,12 +37,13 @@
 #include<stdlib.h>
 #include "../headers/pointstuff.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
 
 
 int main()  {
-    string fname;
-    string lname;
     cout
     <<"    |\\      /| \\     /    |------  |-----|  |----\\   |-----\n"
     <<"    | \\    / |  \\   /     |        |     |  |     \\  |     \n"
@@ -52,7 +53,7 @@ int main()  {
     <<"                                                       v0.1.1\n\n";
 //Because I always wanted to do this
 
-//| \ \    / / | \
+//| \ \    / / |
 //| |\ \  / /| |
 //| | \ \/ / | |
 //| |        | |
@@ -65,32 +66,47 @@ int main()  {
     cout<<"For best results, be honest.\n"; //Yes, yes its that deep
     cout<<"And there's no way you can loop the code\n";
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
-    cin>>fname;
-    if (fname=="Harshit"||fname=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
-    else if (fname=="Yash"||fname=="yash"||fname=="shalya"||fname=="Shalya"){cout<<"ayy motu\n";fname="Motu";lname="Shalya";}
-    else if (fname=="Nalin"||fname=="nalin"||fname=="nixonz"||fname=="Nixonz"){cout<<"ayy Nallu";fname="Nallu";lname="Kant";}
-    else if (fname=="sarthak"||fname=="Sarthak"){cout<<"Sarthak Bhai! _/\\_";lname="Saharan";}
-    else if (fname=="sachin"||fname=="Sachin"){cout<<"Sachin XD";lname="Toy";}
-    else if (fname=="Abhishek"||fname=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh";}
-    else if (fname=="varun"||fname=="Varun"){cout<<"Oye! Varun!";lname="Dhawan";}
-    else if (fname=="Tarushi"||fname=="tarushi"){cout<<"user6tk spotted";fname="user6tk";}
-    else if (fname=="Rushil"||fname=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
-//  else if (fname=="Ishaan"||fname=="ishaan"||fname=="ishan"||fname=="Ishaan"||fname=="Tropkillaz"||fname=="tropkillaz"){cout<<"Tropkillaz!";fname="Tropkillaz";lname="Akhand";}
-//  else if (fname=="Nishchay"||fname=="nishchay"){cout<<"ayy Nishanol aka El~Diablo.";fname="Nishchyl";lname="Alcohol";}
-    else if (fname=="Hardik"||fname=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
-    else{
-    cout<<"Now, for your Last Name : ";
-    cin>>lname;
-  }
 
-    cout<<'\n'<<fname<<' '<<lname<<"? LoL"<<endl;
 
-    cout<<"Now, Mr."<<lname<<", what did you wish to do?"<<endl;
+    class name {
+      private:
+        string fname;
+        string lname;
+        int checkname(){
+          string check=fname;
+          strlower(check);
+
+          if (check=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
+          else if (check=="yash"||check=="shalya"){cout<<"ayy motu\n";fname="Motu";lname="Shalya";}
+          else if (check=="nalin"||check=="nixonz"){cout<<"ayy Nallu";fname="Nallu";lname="Kant";}
+          else if (check=="sarthak"){cout<<"Sarthak Bhai! _/\\_";lname="Saharan";}
+          else if (check=="sachin"){cout<<"Sachin XD";lname="Toy";}
+          else if (check=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh";}
+          else if (check=="tarushi"){cout<<"user6tk spotted";fname="user6tk";}
+          else if (check=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
+          else if (check=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
+          else
+            return 0;
+        }
+      public:
+        void getname(){
+          cin>>fname;
+          if(!checkname()){
+            cout<<"Now, for your Last Name : ";
+            cin>>lname;
+          }
+
+          cout<<'\n'<<fname<<' '<<lname<<"? LoL"<<endl;   // This is a part of getname, yes.
+          cout<<"Now, "<<fname<<", whatcha gonna do?"<<endl;
+
+        }
+    }user;
+
+    user.getname();
 
     char i;
     do  {
-        cout
-        <<endl<<endl
+        cout<<endl<<endl
         //<<"1. See which number is maximum and minimum"<<endl Added to playwithnumbers
 
         <<"1. Play with numbers."<<endl
@@ -136,7 +152,7 @@ int main()  {
                      cout<<"The binary equivalent of the number is "<<b
                      <<"\nThe hexadecimal equivalent of the number is "<<h<<endl;
                 break;
-            case 'e': cout<<"Good Bye, "<<fname<<' '<<lname;break;
+            case 'e': cout<<"Good Bye";break;
             default: break;
             }
         }

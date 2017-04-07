@@ -1,6 +1,9 @@
 #include<iostream>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+
 
 int64_t factorial(int n){
 int64_t p=1;
