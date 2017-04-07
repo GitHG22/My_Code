@@ -1,17 +1,15 @@
 #include<iostream>
 #include<cctype>
-#include<string.h>
+#include<string>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
 
-string strlower(string str){
-  cin>>(str);
+void strlower(string &str){
   int len=str.size();
   for(int i=0; i<len; i++){
     str[i]=tolower(str[i]);
   }
-  return str;
 }

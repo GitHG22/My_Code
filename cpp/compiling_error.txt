@@ -1,8 +1,7 @@
-In file included from /mnt/work/My_Code/cpp/main.cpp:38:0:
-/mnt/work/My_Code/cpp/../headers/pointstuff.h:16:1: error: ‘string’ does not name a type
- string strlower(string str);
+/mnt/work/My_Code/cpp/main.cpp: In function ‘int main()’:
+/mnt/work/My_Code/cpp/main.cpp:95:23: error: qualified-id in declaration before ‘(’ token
+     void name::getname(){
+                       ^
+/mnt/work/My_Code/cpp/main.cpp:171:1: error: expected ‘}’ at end of input
+ }
  ^
-/mnt/work/My_Code/cpp/main.cpp: In member function ‘int main()::name::checkname()’:
-/mnt/work/My_Code/cpp/main.cpp:77:25: error: ‘strlower’ was not declared in this scope
-           strlower(check);
-                         ^

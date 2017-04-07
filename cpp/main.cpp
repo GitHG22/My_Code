@@ -53,7 +53,7 @@ int main()  {
     <<"                                                       v0.1.1\n\n";
 //Because I always wanted to do this
 
-//| \ \    / / | \
+//| \ \    / / |
 //| |\ \  / /| |
 //| | \ \/ / | |
 //| |        | |
@@ -86,21 +86,23 @@ int main()  {
           else if (check=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
           else if (check=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
           else
-            return 1;
+            return 0;
         }
       public:
         void getname(){
           cin>>fname;
-          if(checkname()){
+          if(!checkname()){
             cout<<"Now, for your Last Name : ";
             cin>>lname;
           }
 
           cout<<'\n'<<fname<<' '<<lname<<"? LoL"<<endl;   // This is a part of getname, yes.
-          cout<<"Now, Mr."<<lname<<", what did you wish to do?"<<endl;
+          cout<<"Now, "<<fname<<", whatcha gonna do?"<<endl;
 
         }
     }user;
+
+    user.getname();
 
     char i;
     do  {
