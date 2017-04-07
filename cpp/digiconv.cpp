@@ -2,7 +2,10 @@
 #include<math.h>
 #include<string.h>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+
 
 void d2h(unsigned long int a, char h[]){
   int n=a;

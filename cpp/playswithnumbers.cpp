@@ -1,7 +1,10 @@
 #include<iostream>
 #include"../headers/pointstuff.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+
 
 int playswithnumbers(){
     cout<<"\n\n\n-------Play with Numbers-------\nv0.1.2"

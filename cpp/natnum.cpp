@@ -1,7 +1,10 @@
 #include<iostream>
 
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+
 
 void natnum(){
   unsigned int i;

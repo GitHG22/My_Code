@@ -1,7 +1,10 @@
 #include<iostream>
 #include<math.h>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+
 
 void quadratic(){
   float a;

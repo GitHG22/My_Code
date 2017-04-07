@@ -37,7 +37,10 @@
 #include<stdlib.h>
 #include "../headers/pointstuff.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
 
 
 int main()  {
@@ -65,7 +68,7 @@ int main()  {
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
 
 
-    class naam {    // You never know when something's a keyword
+    class name {
       private:
         string fname;
         string lname;
@@ -88,13 +91,13 @@ int main()  {
       public:
         void getname(){
           cin>>fname;
-          if(checkname();){
+          if(checkname()){
             cout<<"Now, for your Last Name : ";
-            cin>>user.lname;
+            cin>>lname;
           }
 
-          cout<<'\n'<<user.fname<<' '<<user.lname<<"? LoL"<<endl;   // This is a part of getname, yes.
-          cout<<"Now, Mr."<<user.lname<<", what did you wish to do?"<<endl;
+          cout<<'\n'<<fname<<' '<<lname<<"? LoL"<<endl;   // This is a part of getname, yes.
+          cout<<"Now, Mr."<<lname<<", what did you wish to do?"<<endl;
 
         }
     }user;
@@ -147,7 +150,7 @@ int main()  {
                      cout<<"The binary equivalent of the number is "<<b
                      <<"\nThe hexadecimal equivalent of the number is "<<h<<endl;
                 break;
-            case 'e': cout<<"Good Bye, "<<user.fname<<' '<<user.lname;break;
+            case 'e': cout<<"Good Bye";break;
             default: break;
             }
         }
