@@ -1,7 +1,0 @@
-/mnt/work/My_Code/cpp/main.cpp: In function ‘int main()’:
-/mnt/work/My_Code/cpp/main.cpp:95:23: error: qualified-id in declaration before ‘(’ token
-     void name::getname(){
-                       ^
-/mnt/work/My_Code/cpp/main.cpp:171:1: error: expected ‘}’ at end of input
- }
- ^
