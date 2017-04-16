@@ -43,6 +43,43 @@ using std::endl;
 using std::string;
 
 
+    class user {
+      private:
+        string fname;
+        string lname;
+        int checkname();
+      public:
+        void getname();
+    };
+
+    int user::checkname() {
+      string check=fname;
+      strlower(check);
+      if (check=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
+      else if (check=="yash"||check=="shalya"){cout<<"ayy motu\n";fname="Motu";lname="Shalya";}
+      else if (check=="nalin"||check=="nixonz"){cout<<"ayy Nallu";fname="Nallu";lname="Kant";}
+      else if (check=="sarthak"){cout<<"Sarthak Bhai! _/\\_";lname="Saharan";}
+      else if (check=="sachin"){cout<<"Sachin XD";lname="Toy";}
+      else if (check=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh";}
+      else if (check=="tarushi"){cout<<"user6tk spotted";fname="user6tk";}
+      else if (check=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
+      else if (check=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
+      else
+        return 0;
+    }
+
+    void user::getname(){
+      cin>>fname;
+      if(!checkname()){
+        cout<<"Now, for your Last Name : ";
+        cin>>lname;
+      }
+
+      cout<<'\n'<<fname<<' '<<lname<<"? LoL"<<endl;   // This is a part of getname, yes.
+      cout<<"Now, "<<fname<<", whatcha gonna do?"<<endl;
+
+    }
+
 int main()  {
     cout
     <<"    |\\      /| \\     /    |------  |-----|  |----\\   |-----\n"
@@ -50,7 +87,7 @@ int main()  {
     <<"    |  \\  /  |   \\ /      |        |     |  |      | |---  \n"
     <<"    |   \\/   |    |       |        |     |  |     /  |     \n"
     <<"    |        |    |       |------  |-----|  |----/   |-----\n"
-    <<"                                                       v0.1.1\n\n";
+    <<"                                                       v0.1.2\n\n";
 //Because I always wanted to do this
 
 //| \ \    / / |
@@ -68,41 +105,8 @@ int main()  {
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
 
 
-    class name {
-      private:
-        string fname;
-        string lname;
-        int checkname(){
-          string check=fname;
-          strlower(check);
-
-          if (check=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
-          else if (check=="yash"||check=="shalya"){cout<<"ayy motu\n";fname="Motu";lname="Shalya";}
-          else if (check=="nalin"||check=="nixonz"){cout<<"ayy Nallu";fname="Nallu";lname="Kant";}
-          else if (check=="sarthak"){cout<<"Sarthak Bhai! _/\\_";lname="Saharan";}
-          else if (check=="sachin"){cout<<"Sachin XD";lname="Toy";}
-          else if (check=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh";}
-          else if (check=="tarushi"){cout<<"user6tk spotted";fname="user6tk";}
-          else if (check=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
-          else if (check=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
-          else
-            return 0;
-        }
-      public:
-        void getname(){
-          cin>>fname;
-          if(!checkname()){
-            cout<<"Now, for your Last Name : ";
-            cin>>lname;
-          }
-
-          cout<<'\n'<<fname<<' '<<lname<<"? LoL"<<endl;   // This is a part of getname, yes.
-          cout<<"Now, "<<fname<<", whatcha gonna do?"<<endl;
-
-        }
-    }user;
-
-    user.getname();
+    user user1;
+    user1.getname();
 
     char i;
     do  {
