@@ -105,6 +105,8 @@ int playswithnumbers(){
         //index building ends here
     }
 
+    cout<<'\b'<<' ';
+
     int mini=index[0][0], maxi=index[0][0];
 
 
@@ -157,8 +159,8 @@ int playswithnumbers(){
     cout<<"\nTheir sum is  "<<sum<<" and the product is "<<prod<<"\nThe largest number is "<<maxi<<" and the smallest one is "<<mini;
     if(ap==0){cout<<"\nThe series of numbers is an AP.\n";}
     else{cout<<"\nThe series of numbers is not an AP.\n";}
-    if(gp==0){cout<<"\nThe series of numbers is an GP.\n";}
-    else{cout<<"\nThe series of numbers is not an GP.\n";}
+    if(gp==0){cout<<"\nThe series of numbers is a GP.\n";}
+    else{cout<<"\nThe series of numbers is not a GP.\n";}
 
 
     return 0;
