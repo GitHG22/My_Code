@@ -1,7 +1,7 @@
 #ifndef POINTSTUFF_H_INCLUDED
 #define POINTSTUFF_H_INCLUDED
 
-//#include<string>
+#include<string>
 
 int greatest();
 int charalph();
