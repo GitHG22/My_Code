@@ -33,7 +33,7 @@
 
 #include<iostream>
 #include<math.h>
-#include<string>
+#include<cstring>
 #include<stdlib.h>
 #include "../headers/pointstuff.h"
 
@@ -55,15 +55,15 @@ using std::string;
     int user::checkname() {
       string check=fname;
       strlower(check);
-      if (check=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n";}
-      else if (check=="yash"||check=="shalya"){cout<<"ayy motu\n";fname="Motu";lname="Shalya";}
-      else if (check=="nalin"||check=="nixonz"){cout<<"ayy Nallu";fname="Nallu";lname="Kant";}
-      else if (check=="sarthak"){cout<<"Sarthak Bhai! _/\\_";lname="Saharan";}
-      else if (check=="sachin"){cout<<"Sachin XD";lname="Toy";}
-      else if (check=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh";}
-      else if (check=="tarushi"){cout<<"user6tk spotted";fname="user6tk";}
-      else if (check=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill";}
-      else if (check=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant";}
+      if (check=="harshit"){cout<<"\nAbe apne hi programme mein kya dekhna chah raha hai?\n"; return 1;}
+      else if (check=="yash"||check=="shalya"){cout<<"ayy motu\n";fname="Motu";lname="Shalya"; return 1;}
+      else if (check=="nalin"||check=="nixonz"){cout<<"ayy Nallu";fname="Nallu";lname="Kant"; return 1;}
+      else if (check=="sarthak"){cout<<"Sarthak Bhai! _/\\_";lname="Saharan"; return 1;}
+      else if (check=="sachin"){cout<<"Sachin XD";lname="Toy"; return 1;}
+      else if (check=="abhishek"){cout<<"Mango :P";fname="Mango";lname="Ka Pedh"; return 1;}
+      else if (check=="tarushi"){cout<<"user6tk spotted";fname="user6tk"; return 1;}
+      else if (check=="rushil"){cout<<"Ae motu ruchill";fname="Ru";lname="Chill"; return 1;}
+      else if (check=="hardik"){cout<<"Lo and behold! Hardik is here!";fname="Hardukant"; return 1;}
       else
         return 0;
     }
@@ -87,7 +87,7 @@ int main()  {
     <<"    |  \\  /  |   \\ /      |        |     |  |      | |---  \n"
     <<"    |   \\/   |    |       |        |     |  |     /  |     \n"
     <<"    |        |    |       |------  |-----|  |----/   |-----\n"
-    <<"                                                       v0.1.2\n\n";
+    <<"                                                       v0.1.3\n\n";
 //Because I always wanted to do this
 
 //| \ \    / / |
@@ -125,7 +125,7 @@ int main()  {
         //<<"6. Generate Fibonacci Series and optionally get the sum"<<endl
         //<<"7. Find the factorial of a given number"<<endl
         <<"4. Find roots of a quadratic equation, because you can't do homework yourself."<<endl
-        <<"5. Enter a number in decimal and get the binary and hexadecimal equivalent of it."<<endl
+        <<"5. Enter a number in decimal and get the binary and hexadecimal equivalent of it"<<endl
         <<"e. GTFO"<<endl
         <<"So? ";
         cin>>i;
@@ -156,7 +156,7 @@ int main()  {
                      cout<<"The binary equivalent of the number is "<<b
                      <<"\nThe hexadecimal equivalent of the number is "<<h<<endl;
                 break;
-            case 'e': cout<<"Good Bye";break;
+            case 'e': cout<<"Good Bye\n";break;
             default: break;
             }
         }

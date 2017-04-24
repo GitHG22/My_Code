@@ -7,7 +7,7 @@ using std::endl;
 
 
 int playswithnumbers(){
-    cout<<"\n\n\n-------Play with Numbers-------\nv0.1.2"
+    cout<<"\n\n\n-------Play with Numbers-------\nv0.1.3"
         <<"\n\nSo, you wanna play with numbers? Here goes\n\n";
     long int num[128];
     int k=0;
@@ -24,7 +24,7 @@ int playswithnumbers(){
                 cin>>n;
                 if(n<=128&&n>0){
                     cout<<"Enter the integers, one after the another. Press enter after each number.\n";
-                    for(int i=0;i<n;i++){
+                    for(unsigned int i=0;i<n;i++){
                         cin>>num[i];
                     }
                 }
@@ -40,13 +40,13 @@ int playswithnumbers(){
                     cin>>b;
                     if(b=='1'){
                         cout<<"How many numbers do you want? (Enter a number smaller than 128) ";cin>>n;
-                        for(int i=0;i<n;i++){
+                        for(unsigned int i=0;i<n;i++){
                             num[i]=i+1;
                         }
                     }
                     else if(b=='2') {
                         cout<<"How many terms do you want? ";cin>>n;
-                        for(int i=0; i<n; i++){
+                        for(unsigned int i=0; i<n; i++){
                             if(i==0){num[i]=1;}
                             else if(i==1){num[i]=1;}
                             else {
@@ -57,9 +57,9 @@ int playswithnumbers(){
                     else if(b=='3'){
                         cout<<"How many Binomial Coefficients do you want? ";cin>>n;
 
-                            for(int i=0; i<=n; i++){
+                            for(unsigned int i=0; i<=n; i++){
                                 num[i]=1;
-                                    for(int j=0; j<i; j++){
+                                    for(unsigned int j=0; j<i; j++){
                                         num[i]*=n-j;
                                         }
                                     num[i]/=factorial(i);
@@ -80,7 +80,7 @@ int playswithnumbers(){
 
 
     cout<<"The numbers, in the order of how you entered them, are ";
-    for(int i=0;i<n;i++){
+    for(unsigned int i=0;i<n;i++){
         cout<<num[i]<<',';
         sum+=num[i];
         prod*=num[i];
@@ -88,7 +88,7 @@ int playswithnumbers(){
         //Building up the index
         //index[x][0] is the number, index[x][1] is the frequency, index[x][2] is the location it was first seen
 
-        for(int j=0;j<i;j++){
+        for(unsigned int j=0;j<i;j++){
             if(num[i]==index[j][0]){
                 index[j][1]++;
                 flag1=1;
@@ -113,7 +113,7 @@ int playswithnumbers(){
     //Check if Arithmetic Progression or not
     int ap=0;
 
-    for(int i=2;i<n;i++){
+    for(unsigned int i=2;i<n;i++){
         if((num[i]-num[i-1])==(num[i-1]-num[i-2])){
             continue;
         }
@@ -131,7 +131,7 @@ int playswithnumbers(){
 
     int gp=0;
 
-    for(int i=2; i<n; i++){
+    for(unsigned int i=2; i<n; i++){
         if((num[i-1]*num[i-1])==(num[i-2]*num[i])){
             continue;
         }
@@ -156,12 +156,31 @@ int playswithnumbers(){
             mini=index[i][0];
         }
     }
+    cout<<'\b'<<' ';
     cout<<"\nTheir sum is  "<<sum<<" and the product is "<<prod<<"\nThe largest number is "<<maxi<<" and the smallest one is "<<mini;
     if(ap==0){cout<<"\nThe series of numbers is an AP.\n";}
     else{cout<<"\nThe series of numbers is not an AP.\n";}
     if(gp==0){cout<<"\nThe series of numbers is a GP.\n";}
     else{cout<<"\nThe series of numbers is not a GP.\n";}
 
+    char answer;
+    int bb;
+    do {
+      cout<<"Would you like to find the memory address of any number that you have stored?\nEnter your choice (y/n) : ";
+      cin>>answer;
+      if(answer=='y'){
+        cout<<"Whichth number? : ";
+        cin>>bb;
+        cout<<&num[bb-1]<<endl;
+      }
+      else if(answer=='n'){
+      }
+      else {
+        for(unsigned int i=0; i>=0;i++){ // *lenny face here*
+          cout<<"LoL";
+        }
+      }
+      }while(answer=='y');
 
     return 0;
 }
