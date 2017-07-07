@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdlib.h>
 #include"../headers/pointstuff.h"
 
 using std::cout;

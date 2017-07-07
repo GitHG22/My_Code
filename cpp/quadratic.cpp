@@ -1,5 +1,6 @@
 #include<iostream>
 #include<math.h>
+#include<stdlib.h>
 
 using std::cout;
 using std::cin;

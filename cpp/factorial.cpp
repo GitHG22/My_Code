@@ -5,8 +5,8 @@ using std::cin;
 using std::endl;
 
 
-int64_t factorial(int n){
-int64_t p=1;
+long int factorial(int n){
+long int p=1;
 
 for(int i=1; i<=n; i++) {
       p = p*i;
