@@ -155,6 +155,8 @@ int main()  {
                      d2b(no,b);d2h(no,h);
                      cout<<"The binary equivalent of the number is "<<b
                      <<"\nThe hexadecimal equivalent of the number is "<<h<<endl;
+                     memset(h,0,50);
+                     memset(b,0,50);
                 break;
             case 'e': cout<<"Good Bye\n";break;
             default: break;
