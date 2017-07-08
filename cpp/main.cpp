@@ -37,11 +37,14 @@
 #include<stdlib.h>
 #include "../headers/pointstuff.h"
 #include<ctime>
+#include<fstream>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+using std::fstream;
+using std::ios;
 
 
     class user {
@@ -51,6 +54,12 @@ using std::string;
         int checkname();
       public:
         void getname();
+        string returnname(){
+            string cat=fname;
+            cat+=' ';
+            cat+=lname;
+            return cat;
+        }
     };
 
     int user::checkname() {
@@ -84,6 +93,8 @@ using std::string;
 int main()  {
     time_t t = time(0) ;    //When the program begins.
     tm *initime = localtime(&t);
+    fstream obj;
+    obj.open("Wannacry.dat", ios::out | ios::app );
 
     cout
     <<"    |\\      /| \\     /    |------  |-----|  |----\\   |-----\n"
@@ -103,6 +114,13 @@ int main()  {
 
 
     cout<<"Program initiated at : "<<asctime(initime);
+
+
+    obj<<"\n-------------------------------------------------------------\n";
+    obj<<asctime(initime);
+    obj<<"-------------------------------------------------------------\n\n\n";
+
+
     cout<<"\nFor best results, be honest.\n"; //Yes, yes its that deep
     cout<<"And there's no way you can loop the code\n";
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
@@ -111,6 +129,8 @@ int main()  {
     user user1;
     user1.getname();
 
+    obj<<"User Name : "<<user1.returnname();
+    obj.close();
     char i;
     do  {
         cout<<endl<<endl
