@@ -36,6 +36,7 @@
 #include<cstring>
 #include<stdlib.h>
 #include "../headers/pointstuff.h"
+#include<ctime>
 
 using std::cout;
 using std::cin;
@@ -81,6 +82,9 @@ using std::string;
     }
 
 int main()  {
+    time_t t = time(0) ;    //When the program begins.
+    tm *initime = localtime(&t);
+
     cout
     <<"    |\\      /| \\     /    |------  |-----|  |----\\   |-----\n"
     <<"    | \\    / |  \\   /     |        |     |  |     \\  |     \n"
@@ -98,9 +102,8 @@ int main()  {
 //And this one too. Will do it later.
 
 
-
-
-    cout<<"For best results, be honest.\n"; //Yes, yes its that deep
+    cout<<"Program initiated at : "<<asctime(initime);
+    cout<<"\nFor best results, be honest.\n"; //Yes, yes its that deep
     cout<<"And there's no way you can loop the code\n";
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
 
