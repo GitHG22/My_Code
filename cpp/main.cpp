@@ -36,11 +36,16 @@
 #include<cstring>
 #include<stdlib.h>
 #include "../headers/pointstuff.h"
+#include<ctime>
+#include<fstream>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+using std::fstream;
+using std::ios;
+using std::clock_t;
 
 
     class user {
@@ -50,6 +55,12 @@ using std::string;
         int checkname();
       public:
         void getname();
+        string returnname(){
+            string cat=fname;
+            cat+=' ';
+            cat+=lname;
+            return cat;
+        }
     };
 
     int user::checkname() {
@@ -81,13 +92,19 @@ using std::string;
     }
 
 int main()  {
+
+    time_t t = time(0) ;    //When the program begins.
+    tm *initime = localtime(&t);
+    fstream obj;
+    obj.open("Wannacry.dat", ios::out | ios::app );
+    clock_t time_in;
     cout
     <<"    |\\      /| \\     /    |------  |-----|  |----\\   |-----\n"
     <<"    | \\    / |  \\   /     |        |     |  |     \\  |     \n"
     <<"    |  \\  /  |   \\ /      |        |     |  |      | |---  \n"
     <<"    |   \\/   |    |       |        |     |  |     /  |     \n"
     <<"    |        |    |       |------  |-----|  |----/   |-----\n"
-    <<"                                                       v0.1.3\n\n";
+    <<"                                                       v0.1.4\n\n";
 //Because I always wanted to do this
 
 //| \ \    / / |
@@ -98,9 +115,14 @@ int main()  {
 //And this one too. Will do it later.
 
 
+    cout<<"You begun at : "<<asctime(initime);
 
 
-    cout<<"For best results, be honest.\n"; //Yes, yes its that deep
+    obj<<"-------------------------------------------------------------\n";
+    obj<<asctime(initime);
+    obj<<"-------------------------------------------------------------\n\n";
+
+
     cout<<"And there's no way you can loop the code\n";
     cout<<"Okay, first things first, what's your name?\nEnter your First Name : ";
 
@@ -108,12 +130,14 @@ int main()  {
     user user1;
     user1.getname();
 
+    obj<<"User Name : "<<user1.returnname()<<endl<<endl;
+
     char i;
     do  {
         cout<<endl<<endl
         //<<"1. See which number is maximum and minimum"<<endl Added to playwithnumbers
 
-        <<"1. Play with numbers."<<endl
+        <<"1. Play with numbers. [Tracking free]"<<endl
         <<"2. Enter a character and check if it's a number or alphabet."<<endl
 
         //<<"3. Find the 'raised to power' of a number"<<endl //deprecated. Reason: Small program.
@@ -129,7 +153,31 @@ int main()  {
         <<"e. GTFO"<<endl
         <<"So? ";
         cin>>i;
+        time_in = clock();
 
+
+
+        obj<<endl<<time_in/(double)CLOCKS_PER_SEC<<" seconds in the program, ";
+
+        switch (i) {
+            case '1' : obj<<"you chose to play with numbers. Which is tracking free so we can't really do much about it.\n";
+                       break;
+            case '2' : obj<<"you chose to enter a character to see if its a number or alphabet.\n"; //Seriously? Who would do that?
+                       break;
+            case '3' : obj<<"you chose to generate the table of a number.\n";
+                       break;
+            case '4' : obj<<"you chose to find the roots of a quadratic equation.\n";
+                       break;
+            case '5' : obj<<"you chose to enter a number in decimal and got the binary and hexadecimal equivalent of it.\n";
+                       break;
+            case 'e' : obj<<"you chose to GTFO.\n";
+                       break;
+            default : obj<<"you started to suck.\n";
+        }
+
+        obj.close();
+
+        obj.open("Wannacry.dat", ios::out | ios::app );
         if((i<=56&&i>=48)||i=='e'){
             switch (i){
             //case 49: greatest(); //deprecated. See archive.
@@ -155,6 +203,7 @@ int main()  {
                      d2b(no,b);d2h(no,h);
                      cout<<"The binary equivalent of the number is "<<b
                      <<"\nThe hexadecimal equivalent of the number is "<<h<<endl;
+                     obj<<"You asked to convert "<<no<<" to it's hexadecimal and binary equivalent, and got the answer as "<<b<<" in binary and "<<h<<"in hexadecimal.\n";
                      memset(h,0,50);
                      memset(b,0,50);
                 break;
@@ -170,6 +219,6 @@ int main()  {
 
     }
     while(i!='e');
-
+    obj.close();
     return 0;
 }
